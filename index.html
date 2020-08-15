@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/slick.css"/>
     <script type="text/javascript" src="assets/slick.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script>
         // Change nav on scroll
         $(function () {
@@ -32,6 +34,12 @@
                 nextArrow: $('.fa-arrow-circle-right')
             });
         });
+        // AOS
+        $(function() {
+            AOS.init({
+                duration: 1000
+            });
+        });
     </script>
 </head>
 <body>
@@ -45,7 +53,7 @@
     
     <div class="hwrapper" id="top">
         <video autoplay muted loop id="bgvid"><source src="assets/bgvideo.mp4" type="video/mp4"></video>
-        <div class="header">
+        <div class="header" data-aos="fade">
             <img class="himg" src="assets/logo.png" />
             <h1>Junior Team</h1>
             <h3>We make your Minecraft dreams into reality.<br /><i>Reliable services at a great price.</i></h3>
@@ -54,14 +62,14 @@
     </div>
 
     <div class="about-wrapper" id="about">
-        <div class="about">
+        <div class="about" data-aos="fade-right">
             <h1>About Junior Team</h1>
             <p>Founded in 2013 by bremea, Junior Team is one of the best Minecraft service providers on the market. With over 100,000 clients and 300 freelancers, we can get a quality job done quickly and at an affordable price. We offer everything, from building to plugin development. If you need it, we can get it done.</p>
         </div>
     </div>
 
     <div class="reviews-wrapper" id="reviews">
-        <div class="reviews">
+        <div class="reviews" data-aos="fade-left">
             <h1>Junior Team Reviews</h1>
             <p>Take a look at reviews from some Junior Team clients.</p>
             <div class="slides-wrapper">
@@ -109,31 +117,33 @@
     
     <div class="pricing-wrapper" id="pricing">
         <div class="pricing">
-            <h1>Junior Team Pricing</h1>
-            <p>Listed below are minimum prices for some of our services that we offer.<br />Please keep in mind our freelancers usually request more than our minimum prices, especially for larger commissions.</p>
-            <br />
-            <div class="pitems">
-                <div class="pitem">
-                    <i class="fas fa-tools"></i>
-                    <h2>Building $30</h2>
-                    <p>Minecraft Builds, Terraforming, WorldEdit, Server Builds/Lobbies and more.</p>
+            <div class="pricing-content" data-aos="zoom-out-up">
+                <h1>Junior Team Pricing</h1>
+                <p>Listed below are minimum prices for some of our services that we offer.<br />Please keep in mind our freelancers usually request more than our minimum prices, especially for larger commissions.</p>
+                <br />
+                <div class="pitems">
+                    <div class="pitem">
+                        <i class="fas fa-tools"></i>
+                        <h2>Building $30</h2>
+                        <p>Minecraft Builds, Terraforming, WorldEdit, Server Builds/Lobbies and more.</p>
+                    </div>
+                    <div class="pitem">
+                        <i class="fas fa-palette"></i>
+                        <h2>Art $5</h2>
+                        <p>GFX, Vector Art, Hand-Drawn, Pixel Art, Short Animations and more.</p>
+                    </div>
+                    <div class="pitem">
+                        <i class="fas fa-code"></i>
+                        <h2>Development $10</h2>
+                        <p>Plugin Development, Web Development, Bot Development and more.</p>
+                    </div>    
                 </div>
-                <div class="pitem">
-                    <i class="fas fa-palette"></i>
-                    <h2>Art $5</h2>
-                    <p>GFX, Vector Art, Hand-Drawn, Pixel Art, Short Animations and more.</p>
-                </div>
-                <div class="pitem">
-                    <i class="fas fa-code"></i>
-                    <h2>Development $10</h2>
-                    <p>Plugin Development, Web Development, Bot Development and more.</p>
-                </div>    
             </div>
         </div>
     </div>
 
     <div class="order-wrapper" id="order">
-        <div class="order">
+        <div class="order" data-aos="fade">
             <h1>Turn your dreams into reality today!</h1>
             <p>Junior Team is run from our Discord server, where you can open a commision. Thank you for choosing Junior Team!</p>
             <a class="mbtn" href="https://discord.gg/A6sQA5E">Join Our Discord</a>
